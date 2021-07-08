@@ -1,0 +1,17 @@
+*transient response
+.include ../AE01.01.01.118.cir
+.param Iload=5
+.param Vsource=30
+.param tr=50n
+.param tf=50n
+.param tdelay=0
+.param frec=10K
+.param cycle=1/frec
+.param x_base=cycle*10
+.param percent=50
+.param duty=(percent/100)*cycle
+.tran 0 {x_base} 0
+.temp 25
+.backanno
+.op
+
